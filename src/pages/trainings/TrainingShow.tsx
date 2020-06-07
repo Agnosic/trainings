@@ -1,13 +1,18 @@
-import { IonButton, IonModal, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonMenu, IonList, IonItem, IonButtons, IonMenuButton, IonTabs, IonTabBar, IonIcon, IonTabButton, IonBadge, IonLabel, IonItemGroup, IonItemDivider, IonInput, IonToggle, IonCheckbox, IonRange, IonText, IonItemSliding, IonItemOption, IonItemOptions, IonNote, IonAvatar, IonListHeader, IonChip, IonGrid, IonRow, IonCol, IonImg, IonAlert, } from '@ionic/react';
+import { IonButton, IonModal, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonMenu, IonList, IonItem, IonButtons, IonMenuButton, IonTabs, IonTabBar, IonIcon, IonTabButton, IonBadge, IonLabel, IonItemGroup, IonItemDivider, IonInput, IonToggle, IonCheckbox, IonRange, IonText, IonItemSliding, IonItemOption, IonItemOptions, IonNote, IonAvatar, IonListHeader, IonChip, IonGrid, IonRow, IonCol, IonImg, IonAlert, IonRouterOutlet, IonTab, } from '@ionic/react';
 import React, { useState } from 'react';
-import ExploreContainer from '../../components/ExploreContainer';
+import TabContent from '../../components/TabContent';
 import './Training.css';
-import { calendar, personCircle, map, informationCircle, personCircleOutline, calendarOutline, personOutline, locationOutline, locationSharp, calendarSharp, personSharp } from 'ionicons/icons';
+import { calendar, personCircle, map, informationCircle, personCircleOutline, calendarOutline, personOutline, locationOutline, locationSharp, calendarSharp, personSharp, arrowUndoSharp, thumbsUpSharp, thumbsDownSharp, personAddSharp, shuffleSharp } from 'ionicons/icons';
 import { IonReactRouter } from '@ionic/react-router';
+import { Route, Redirect } from 'react-router';
+
 
 const TrainingShow: React.FC = () => {
 
   const [showJoin, setShowJoin] = useState(false);
+  const [showParticipants, setShowParticipants] = useState(false);
+
+  var selectedTab = "participating";
 
   return (
     <IonPage>
@@ -42,7 +47,7 @@ const TrainingShow: React.FC = () => {
           </IonItem>
         </IonList>
 
-        <IonList lines="none">
+        <IonList lines="none" onClick={() => setShowParticipants(true)}>
           <IonListHeader>
             <h4>  24 / 40 participants</h4>
           </IonListHeader>
@@ -95,6 +100,43 @@ const TrainingShow: React.FC = () => {
           message={'Invite your friends to join'}
           buttons={['Invite your friends']}
         />
+
+        <IonModal isOpen={showParticipants} cssClass='my-custom-class'>
+          <TabContent selected={selectedTab} />
+          <IonTabs>
+            <IonRouterOutlet></IonRouterOutlet>
+            {/*-- Tab bar --*/}
+            <IonTabBar class="header" selectedTab="participating" slot="bottom">
+              <IonTabButton onClick={() => setShowParticipants(false)}>
+                <IonIcon icon={arrowUndoSharp} />
+              </IonTabButton>
+
+              <IonTabButton tab="participating" selected>
+                <IonIcon icon={thumbsUpSharp} />
+                <IonLabel>Participating</IonLabel>
+              </IonTabButton>
+
+              <IonTabButton tab="notGoing">
+                <IonIcon icon={thumbsDownSharp} />
+                <IonLabel>Not going</IonLabel>
+              </IonTabButton>
+
+              <IonTabButton tab="invited">
+                <IonIcon icon={shuffleSharp} />
+                <IonLabel>Invited</IonLabel>
+              </IonTabButton>
+
+              <IonTabButton tab="addParticipant">
+                <IonIcon icon={personAddSharp} />
+                <IonLabel>Invite</IonLabel>
+              </IonTabButton>
+            </IonTabBar>
+
+          </IonTabs>
+
+        </IonModal>
+
+
 
       </IonContent>
 
