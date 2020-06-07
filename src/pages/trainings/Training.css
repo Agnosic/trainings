@@ -1,0 +1,22 @@
+.join {
+  --background: #ffc800;
+  --height: 30%;
+}
+
+.app {
+  --color: #ffc800;
+}
+
+
+.footer, .header {
+  --background: #ffc800
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.center {
+  text-align: center;
+}

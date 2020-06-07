@@ -11,11 +11,11 @@ const Page: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar class='header'>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>{name}</IonTitle>
+          <IonTitle color="dark">{name}</IonTitle>
         </IonToolbar>
       </IonHeader>
 
