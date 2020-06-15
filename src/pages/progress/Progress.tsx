@@ -6,17 +6,17 @@ import {Bar} from 'react-chartjs-2';
 
 
 
-const Trainings: React.FC = () => {
+const Progress: React.FC = () => {
 
   const data = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
         label: 'Hours of activity',
-        backgroundColor: 'rgba(255, 251, 80,1)',
+        backgroundColor: 'rgba(255,200,00,1)',
         borderColor: 'rgba(255,200,00,1)',
         borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255, 251, 80,1)',
+        hoverBackgroundColor: 'rgba(255,200,00,1)',
         hoverBorderColor: 'rgba(255,200,00,1)',
         data: [0, 10, 26, 15, 56, 55, 40]
       }
@@ -35,7 +35,7 @@ const Trainings: React.FC = () => {
               <IonButtons slot="start">
                 <IonMenuButton />
               </IonButtons>
-              <IonTitle color="dark">Trainings</IonTitle>
+              <IonTitle color="dark">My progress</IonTitle>
             </IonToolbar>
           </IonHeader>
 
@@ -55,7 +55,7 @@ const Trainings: React.FC = () => {
 
 };
 
-export default Trainings;
+export default Progress;
 
 
 
