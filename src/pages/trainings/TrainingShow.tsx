@@ -68,25 +68,25 @@ const TrainingShow: React.FC = () => {
           <IonGrid>
             <IonRow>
               <IonCol size="1.5"><IonAvatar class="avatar">
-                <img src="https://www.gravatar.com/avatar/$12?d=monsterid&f=y" />
+                <img src="/assets/avatar.png" className="avatar" />
               </IonAvatar></IonCol>
               <IonCol size="1.5"><IonAvatar class="avatar">
-                <img src="https://www.gravatar.com/avatar/$2?d=monsterid&f=y" />
+                <img src="/assets/avatar.png" className="avatar" />
               </IonAvatar></IonCol>
               <IonCol size="1.5"><IonAvatar class="avatar">
-                <img src="https://www.gravatar.com/avatar/$3?d=monsterid&f=y" />
+                <img src="/assets/avatar.png" className="avatar" />
               </IonAvatar></IonCol>
               <IonCol size="1.5"><IonAvatar class="avatar">
-                <img src="https://www.gravatar.com/avatar/$4?d=monsterid&f=y" />
+                <img src="/assets/avatar.png" className="avatar" />
               </IonAvatar></IonCol>
               <IonCol size="1.5"><IonAvatar class="avatar">
-                <img src="https://www.gravatar.com/avatar/$5?d=monsterid&f=y" />
+                <img src="/assets/avatar.png" className="avatar" />
               </IonAvatar></IonCol>
               <IonCol size="1.5"><IonAvatar class="avatar">
-                <img src="https://www.gravatar.com/avatar/$6?d=monsterid&f=y" />
+                <img src="/assets/avatar.png" className="avatar" />
               </IonAvatar></IonCol>
               <IonCol size="1.5"><IonAvatar class="avatar">
-                <img src="https://www.gravatar.com/avatar/$7?d=monsterid&f=y" />
+                <img src="/assets/avatar.png" className="avatar" />
               </IonAvatar></IonCol>
             </IonRow>
           </IonGrid>
