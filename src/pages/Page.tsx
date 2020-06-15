@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonIcon, IonItem, IonRouterLink } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonIcon, IonItem, IonRouterLink, IonButton } from '@ionic/react';
 import React from 'react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
@@ -17,9 +17,9 @@ const Page: React.FC = () => {
 						<IonMenuButton />
 					</IonButtons>
 					<IonTitle color="dark">{name}</IonTitle>
-					<IonRouterLink routerLink={"/notifications"} slot="end">
-						<IonIcon icon={notificationsSharp} className="ion-padding" />
-					</IonRouterLink>
+					<IonButton color="tertiary" routerLink={"/notifications"} fill="clear" slot="end">
+            <IonIcon slot="icon-only" icon={notificationsSharp} />
+          </IonButton>
 				</IonToolbar>
 			</IonHeader>
 

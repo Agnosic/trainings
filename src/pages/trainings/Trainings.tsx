@@ -17,9 +17,9 @@ const Trainings: React.FC = () => {
             <IonMenuButton />
           </IonButtons>
           <IonTitle color="dark">Trainings</IonTitle>
-          <IonRouterLink routerLink={"/notifications"} slot="end">
-            <IonIcon icon={notificationsSharp} className="ion-padding" />
-          </IonRouterLink>
+          <IonButton color="tertiary" routerLink={"/notifications"} fill="clear" slot="end">
+            <IonIcon slot="icon-only" icon={notificationsSharp} />
+          </IonButton>
         </IonToolbar>
       </IonHeader>
 

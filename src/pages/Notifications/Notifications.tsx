@@ -1,12 +1,13 @@
 
 import React, { ReactNode, ReactElement, useState } from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonList, IonCard, IonCardContent } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonList, IonCard, IonCardContent, IonButton, IonIcon } from '@ionic/react';
 import "./Notifications.css";
 import {
 	SwipeableList,
 } from "@sandstreamdev/react-swipeable-list";
 import "@sandstreamdev/react-swipeable-list/dist/styles.css";
 import NotificationComponent from '../../components/NotificationComponent';
+import { notificationsSharp } from 'ionicons/icons';
 
 
 var initNotifications: Array<any> = [
@@ -29,15 +30,15 @@ var initNotifications: Array<any> = [
 
 const Notifications: React.FC = () => {
 
-  var [notifications, setNotifications] = useState<Array<any>>(initNotifications);  
-  
-  const dismiss = (id: Number) => {
-    initNotifications = initNotifications.filter(n => n.id != id);
-    console.log("dismissed id: " + id);
-    setNotifications(initNotifications);
-  };
+	var [notifications, setNotifications] = useState<Array<any>>(initNotifications);
 
-  return (
+	const dismiss = (id: Number) => {
+		initNotifications = initNotifications.filter(n => n.id != id);
+		console.log("dismissed id: " + id);
+		setNotifications(initNotifications);
+	};
+
+	return (
 		<IonPage>
 			<IonHeader>
 				<IonToolbar class="header">
@@ -45,18 +46,21 @@ const Notifications: React.FC = () => {
 						<IonMenuButton />
 					</IonButtons>
 					<IonTitle color="dark">Notifications</IonTitle>
+					<IonButton color="tertiary" routerLink={"/notifications"} fill="clear" slot="end">
+						<IonIcon slot="icon-only" icon={notificationsSharp} />
+					</IonButton>
 				</IonToolbar>
 			</IonHeader>
 
 			<IonContent className="ion-padding">
 				<h1>Notifications</h1>
 				<SwipeableList>
-            { notifications?.map(n => {
-                return (
-                  <NotificationComponent id={n.id} key={n.id} author={n.author} shortMsg={n.shortMsg} onSwipe={dismiss} />
-                )
-              })
-            }
+					{notifications?.map(n => {
+						return (
+							<NotificationComponent id={n.id} key={n.id} author={n.author} shortMsg={n.shortMsg} onSwipe={dismiss} />
+						)
+					})
+					}
 				</SwipeableList>
 			</IonContent>
 		</IonPage>
