@@ -1,8 +1,8 @@
-import { IonButton, IonModal, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonMenu, IonList, IonItem, IonButtons, IonMenuButton, IonTabs, IonTabBar, IonIcon, IonTabButton, IonBadge, IonLabel, IonItemGroup, IonItemDivider, IonInput, IonToggle, IonCheckbox, IonRange, IonText, IonItemSliding, IonItemOption, IonItemOptions, IonNote, IonAvatar, IonListHeader, IonChip, IonGrid, IonRow, IonCol, IonImg, IonAlert, IonRouterOutlet, IonTab, } from '@ionic/react';
+import { IonButton, IonModal, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonMenu, IonList, IonItem, IonButtons, IonMenuButton, IonTabs, IonTabBar, IonIcon, IonTabButton, IonBadge, IonLabel, IonItemGroup, IonItemDivider, IonInput, IonToggle, IonCheckbox, IonRange, IonText, IonItemSliding, IonItemOption, IonItemOptions, IonNote, IonAvatar, IonListHeader, IonChip, IonGrid, IonRow, IonCol, IonImg, IonAlert, IonRouterOutlet, IonTab, IonRouterLink, } from '@ionic/react';
 import React, { useState } from 'react';
 import TabContent from '../../components/TabContent';
 import './Training.css';
-import { calendar, personCircle, map, informationCircle, personCircleOutline, calendarOutline, personOutline, locationOutline, locationSharp, calendarSharp, personSharp, arrowUndoSharp, thumbsUpSharp, thumbsDownSharp, personAddSharp, shuffleSharp } from 'ionicons/icons';
+import { calendar, personCircle, map, informationCircle, personCircleOutline, calendarOutline, personOutline, locationOutline, locationSharp, calendarSharp, personSharp, arrowUndoSharp, thumbsUpSharp, thumbsDownSharp, personAddSharp, shuffleSharp, notificationsSharp } from 'ionicons/icons';
 import { IonReactRouter } from '@ionic/react-router';
 import { Route, Redirect } from 'react-router';
 
@@ -31,6 +31,9 @@ const TrainingShow: React.FC = () => {
             <IonMenuButton />
           </IonButtons>
           <IonTitle color="dark">Training</IonTitle>
+          <IonRouterLink routerLink={"/notifications"} slot="end">
+            <IonIcon icon={notificationsSharp} className="ion-padding" />
+          </IonRouterLink>
         </IonToolbar>
       </IonHeader>
 

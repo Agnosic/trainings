@@ -3,13 +3,13 @@ import React from 'react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Page.css';
-import {notifications} from 'ionicons/icons';
+import { notificationsSharp } from 'ionicons/icons';
 
 const Page: React.FC = () => {
 
-  const { name } = useParams<{ name: string; }>();
+	const { name } = useParams<{ name: string; }>();
 
-  return (
+	return (
 		<IonPage>
 			<IonHeader>
 				<IonToolbar class="header">
@@ -18,7 +18,7 @@ const Page: React.FC = () => {
 					</IonButtons>
 					<IonTitle color="dark">{name}</IonTitle>
 					<IonRouterLink routerLink={"/notifications"} slot="end">
-						<IonIcon icon={notifications} className="ion-padding" />
+						<IonIcon icon={notificationsSharp} className="ion-padding" />
 					</IonRouterLink>
 				</IonToolbar>
 			</IonHeader>
