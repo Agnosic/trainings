@@ -74,16 +74,16 @@ const Progress: React.FC = () => {
 
       <IonContent>
 
-          <ion-list-header color="light">Vertical Bar Chart</ion-list-header>
-          <ion-card class="welcome-card">
-            <ion-card-header>
-              <ion-card-subtitle>Number of Viewers per season for</ion-card-subtitle>
-              <ion-card-title>Game of Thrones</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
+          <ionListHeader color="light">Vertical Bar Chart</ionListHeader>
+          <ionCard class="welcome-card">
+            <ionCardHeader>
+              <ionCardSubtitle>Number of Viewers per season for</ionCardSubtitle>
+              <ionCardTitle>Game of Thrones</ionCardTitle>
+            </ionCardHeader>
+            <ionCardContent>
               <canvas #barChart></canvas>
-            </ion-card-content>
-          </ion-card>
+            </ionCardContent>
+          </ionCard>
 
         <IonList lines="none">
           <IonItem routerLink="/trainings/1">
