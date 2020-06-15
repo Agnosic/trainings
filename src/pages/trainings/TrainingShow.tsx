@@ -12,7 +12,16 @@ const TrainingShow: React.FC = () => {
   const [showJoin, setShowJoin] = useState(false);
   const [showParticipants, setShowParticipants] = useState(false);
 
+  var [showLol, setShowLol] = useState(false);
+
   var selectedTab = "participating";
+  var buttonn;
+
+  if (showLol) {
+    buttonn = <IonButton size="large" color="tertiary" slot="end" onClick={() => setShowLol(false)}>Quit</IonButton>
+  } else {
+    buttonn = <IonButton size="large" color="tertiary" slot="end" onClick={() => { setShowJoin(true); setShowLol(true); }}>Join</IonButton>
+  }
 
   return (
     <IonPage>
@@ -130,7 +139,7 @@ const TrainingShow: React.FC = () => {
                 <IonIcon icon={personAddSharp} />
                 <IonLabel>Invite</IonLabel>
               </IonTabButton>
-            </IonTabBar>
+            </IonTabBar><IonButton size="large" color="tertiary" slot="end" onClick={() => setShowJoin(true)}>Join</IonButton>
 
           </IonTabs>
 
@@ -146,7 +155,9 @@ const TrainingShow: React.FC = () => {
           <IonButton size="large" color="tertiary" slot="start">
             Chat
             </IonButton>
-          <IonButton size="large" color="tertiary" slot="end" onClick={() => setShowJoin(true)}>Join</IonButton>
+          {buttonn}
+
+
 
         </IonToolbar>
       </IonFooter>
