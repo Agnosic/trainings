@@ -1,3 +1,4 @@
+import { IonButton, IonModal, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonMenu, IonList, IonItem, IonButtons, IonMenuButton, IonTabs, IonTabBar, IonIcon, IonTabButton, IonBadge, IonLabel, IonItemGroup, IonItemDivider, IonInput, IonToggle, IonCheckbox, IonRange, IonText, IonItemSliding, IonItemOption, IonItemOptions, IonNote, IonAvatar, IonListHeader, IonChip, IonGrid, IonRow, IonCol, IonImg, IonAlert, } from '@ionic/react';
 
 
 import React from 'react';
@@ -11,30 +12,45 @@ const Trainings: React.FC = () => {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
-        label: 'My First dataset',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
+        label: 'Hours of activity',
+        backgroundColor: 'rgba(255, 251, 80,1)',
+        borderColor: 'rgba(255,200,00,1)',
         borderWidth: 1,
-        hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-        hoverBorderColor: 'rgba(255,99,132,1)',
-        data: [30, 59, 80, 81, 56, 55, 40]
+        hoverBackgroundColor: 'rgba(255, 251, 80,1)',
+        hoverBorderColor: 'rgba(255,200,00,1)',
+        data: [0, 10, 26, 15, 56, 55, 40]
       }
     ]
   };
 
 
+
+
+
+
     return (
-          <div>
-            <h2>My progress</h2>
-            <Bar
-              data={data}
-              width={1000}
-              height={500}
-              options={{
-                maintainAspectRatio: true
-              }}
-            />
-          </div>
+ <IonPage>
+          <IonHeader>
+            <IonToolbar class='header'>
+              <IonButtons slot="start">
+                <IonMenuButton />
+              </IonButtons>
+              <IonTitle color="dark">Trainings</IonTitle>
+            </IonToolbar>
+          </IonHeader>
+
+
+          <IonContent>
+                <Bar
+                              data={data}
+                              width={1000}
+                              height={500}
+                              options={{
+                                maintainAspectRatio: true
+                              }}
+                            />
+          </IonContent>
+        </IonPage>
         );
 
 };
