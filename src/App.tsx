@@ -7,6 +7,7 @@ import { Redirect, Route } from 'react-router-dom';
 import TrainingShow from "./pages/trainings/TrainingShow";
 import Trainings from "./pages/trainings/Trainings";
 import Notifications from "./pages/Notifications/Notifications";
+import Progress from "./pages/progress/Progress"
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,6 +40,8 @@ const App: React.FC = () => {
             <Route path="/home" component={Page} exact />
             <Route path="/trainings/1" component={TrainingShow} exact />
             <Route path="/notifications" component={Notifications} exact />
+            <Route path="/progress" component={Progress} exact />
+
             <Redirect from="/" to="/home" exact />
           </IonRouterOutlet>
         </IonSplitPane>
