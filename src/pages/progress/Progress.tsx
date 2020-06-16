@@ -19,7 +19,7 @@ const Progress: React.FC = () => {
         borderWidth: 1,
         hoverBackgroundColor: 'rgba(255,200,00,1)',
         hoverBorderColor: 'rgba(255,200,00,1)',
-        data: [0, 10, 26, 15, 56, 55, 40]
+        data: [0, 10, 26, 23, 45, 38, 40]
       }
     ]
   };
