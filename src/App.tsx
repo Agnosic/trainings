@@ -5,6 +5,7 @@ import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import TrainingShow from "./pages/trainings/TrainingShow";
+import NewTraining from "./pages/trainings/NewTraining";
 import Trainings from "./pages/trainings/Trainings";
 import Notifications from "./pages/Notifications/Notifications";
 import Progress from "./pages/progress/Progress"
@@ -39,6 +40,7 @@ const App: React.FC = () => {
             <Route path="/trainings" component={Trainings} exact />
             <Route path="/home" component={Page} exact />
             <Route path="/trainings/1" component={TrainingShow} exact />
+            <Route path="/newtraining" component={NewTraining} exact />
             <Route path="/notifications" component={Notifications} exact />
             <Route path="/progress" component={Progress} exact />
 

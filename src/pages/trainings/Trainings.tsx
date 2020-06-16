@@ -1,4 +1,4 @@
-import { IonButton, IonModal, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonMenu, IonList, IonItem, IonButtons, IonMenuButton, IonTabs, IonTabBar, IonIcon, IonTabButton, IonBadge, IonLabel, IonItemGroup, IonItemDivider, IonInput, IonToggle, IonCheckbox, IonRange, IonText, IonItemSliding, IonItemOption, IonItemOptions, IonNote, IonAvatar, IonListHeader, IonChip, IonGrid, IonRow, IonCol, IonImg, IonAlert, IonRouterLink, } from '@ionic/react';
+import { IonButton, IonModal, IonContent, IonFabButton, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonMenu, IonList, IonItem, IonButtons, IonMenuButton, IonTabs, IonTabBar, IonIcon, IonTabButton, IonBadge, IonLabel, IonItemGroup, IonItemDivider, IonInput, IonToggle, IonCheckbox, IonRange, IonText, IonItemSliding, IonItemOption, IonItemOptions, IonNote, IonAvatar, IonListHeader, IonChip, IonGrid, IonRow, IonCol, IonImg, IonAlert, IonRouterLink, } from '@ionic/react';
 import React, { useState } from 'react';
 import ExploreContainer from '../../components/ExploreContainer';
 import './Training.css';
@@ -42,6 +42,7 @@ const Trainings: React.FC = () => {
             <IonLabel>Chess</IonLabel>
           </IonItem>
         </IonList>
+        <IonFabButton href="newtraining">Add</IonFabButton>
       </IonContent>
     </IonPage>
   );
