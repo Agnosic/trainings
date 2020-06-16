@@ -6,6 +6,7 @@ import {Bar} from 'react-chartjs-2';
 
 
 
+
 const Progress: React.FC = () => {
 
   const data = {
